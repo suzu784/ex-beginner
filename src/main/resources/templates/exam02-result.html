@@ -5,5 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>足し算結果画面</h1>
+	<span th:text="${num1}">dummy</span> +
+	<span th:text="${num2}">dummy</span> =
+	<span th:text="${result}">dummy</span>
+
+	<a href="exam02-result2.html" th:action="@{/exam02/to-page2}">次へ</a>
 </body>
 </html>
