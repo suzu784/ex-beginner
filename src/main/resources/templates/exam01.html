@@ -6,7 +6,8 @@
 </head>
 <body>
 	<form action="exam01-result.html"
-		  th:action="${/exam01/input-name}">
+		  th:action="@{/exam01/input-name}"
+		  method="post">
 		名前：<input type="text" name="name">
 		<button>送信</button>
   	</form>
