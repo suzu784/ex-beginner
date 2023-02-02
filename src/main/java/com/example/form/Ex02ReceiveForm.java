@@ -4,7 +4,6 @@ public class Ex02ReceiveForm {
 
 	private String num1;
 	private String num2;
-	private String result;
 	
 	public int getIntNum1() {
 		return Integer.parseInt(num1);
@@ -30,11 +29,4 @@ public class Ex02ReceiveForm {
 		this.num2 = num2;
 	}
 
-	public String getResult() {
-		return result;
-	}
-
-	public void setResult(String result) {
-		this.result = result;
-	}
 }

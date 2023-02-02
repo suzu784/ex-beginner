@@ -16,29 +16,24 @@ public class Exam03Controller {
 
 	@Autowired
 	private ServletContext application;
-	
+
 	@GetMapping("")
 	public String index() {
 		return "exam03";
 	}
-	
-	@PostMapping("/item-total")
+
+	@PostMapping("/item-total-price")
 	public String itemTotal(Ex03ReceiveForm receiveForm) {
-		
+
 		int item1 = receiveForm.getIntItem1();
 		int item2 = receiveForm.getIntItem2();
 		int item3 = receiveForm.getIntItem3();
-		int total = item1 + item2 + item3; 
-		Double taxtotal = (item1 + item2 + item3) * 1.1; 
-		
-		
-		application.setAttribute("item1", item1);
-		application.setAttribute("item2", item2);
-		application.setAttribute("item3", item3);
+		int total = item1 + item2 + item3;
+		Double totalIncludeTax = (item1 + item2 + item3) * 1.1;
+
 		application.setAttribute("total", total);
-		application.setAttribute("taxtotal", taxtotal);
-		
-		
+		application.setAttribute("totalIncludeTax", totalIncludeTax);
+
 		return "exam03-result";
 	}
 }
